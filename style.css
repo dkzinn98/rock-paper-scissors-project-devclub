@@ -13,13 +13,18 @@
     min-width: 100%;
     min-height: 100%;
     transform: translate(-50%, -50%);
-    z-index: -1; /* Para garantir que o conteúdo fique na frente */
+    z-index: -1;
     background-size: cover;
 }
 
 h1 {
-    font-size: 50px;
-    letter-spacing: 7px;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+    white-space: nowrap; /* Impede quebra de linha */
+    overflow: hidden; /* Garante que nada "estoure" a tela */
+    text-overflow: ellipsis; /* Exibe "..." se o texto ultrapassar os limites */
+    padding: 5px 15px 5px 15px;
 }
 
 body {
@@ -27,7 +32,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
 }
 
 .container {
@@ -38,12 +42,16 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 90%;
+    /* Limita a largura do container em telas menores */
+    text-align: center;
+    /* Para alinhar o conteúdo centralmente */
 }
 
 .buttons {
-    margin: 30px 0 ;
+    margin: 30px 0;
     display: flex;
-    gap: 30px; /* só posso utilizar o gap se estiver dentro de uma div e com display flex */
+    gap: 30px;
 }
 
 button {
@@ -53,7 +61,6 @@ button {
     border: none;
     border-radius: 10px;
     transition: opacity 0.25s ease-in-out;
-
 }
 
 button:hover {
@@ -76,29 +83,84 @@ p {
     font-weight: bold;
     margin-bottom: 10px;
     font-size: 20px;
-
 }
 
 .your-score {
     letter-spacing: 3px;
     color: black;
-
-
 }
 
 .machine-score {
     letter-spacing: 3px;
     color: black;
-
 }
 
-.your-score span {  /* aqui só irei mudar o span que está dentro desta class */
+.your-score span {
     color: #801effa8;
     font-size: 25px;
 }
 
-.machine-score span {  /* aqui só irei mudar o span que está dentro desta class */
+.machine-score span {
     color: #ff1ebc;
     font-size: 25px;
 }
 
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+        letter-spacing: 5px;
+    }
+
+    button {
+        font-size: 36px;
+        padding: 8px;
+    }
+
+    .buttons {
+        gap: 20px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .your-score span,
+    .machine-score span {
+        font-size: 20px;
+    }
+    .container {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+    button {
+        font-size: 28px;
+        padding: 6px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .your-score span,
+    .machine-score span {
+        font-size: 18px;
+    }
+    .container {
+        align-items: center;
+        justify-content: center;
+    }
+}
