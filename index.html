@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JokenPô :-}</title>
+</head>
+
+<body>
+    <div class="video-container">
+        <video autoplay muted loop playsinline class="background-video">
+            <source src="./assets/teste3.mp4" type="video/mp4">
+
+        </video>
+        <div class="container">
+            <h1>&#x1F451; @dkode.js JokenPô &#x1F451;</h1>
+
+            <div class="buttons">
+                <button id="rock" onclick="playHuman('rock')">&#x1F44A;</button>
+                <button id="paper" onclick="playHuman('paper')">&#x1f590;</button>
+                <button id="scissors" onclick="playHuman('scissors')">&#x270c;</button>
+            </div>
+            <p id="result"></p>
+            <p class="your-score">Your score: <span id="myScore">0</span></p>
+            <p class="machine-score">Machine score: <span id="computerScore">0</span></p>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>

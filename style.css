@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Para garantir que o conteúdo fique na frente */
+    background-size: cover;
+}
+
+h1 {
+    font-size: 50px;
+    letter-spacing: 7px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.726);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    margin: 30px 0 ;
+    display: flex;
+    gap: 30px; /* só posso utilizar o gap se estiver dentro de uma div e com display flex */
+}
+
+button {
+    padding: 10px;
+    font-size: 48px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: opacity 0.25s ease-in-out;
+
+}
+
+button:hover {
+    opacity: 0.6;
+}
+
+#rock {
+    background-color: #801effa8;
+}
+
+#paper {
+    background-color: #da1eff93;
+}
+
+#scissors {
+    background-color: #ff1ece98;
+}
+
+p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 20px;
+
+}
+
+.your-score {
+    letter-spacing: 3px;
+    color: black;
+
+
+}
+
+.machine-score {
+    letter-spacing: 3px;
+    color: black;
+
+}
+
+.your-score span {  /* aqui só irei mudar o span que está dentro desta class */
+    color: #801effa8;
+    font-size: 25px;
+}
+
+.machine-score span {  /* aqui só irei mudar o span que está dentro desta class */
+    color: #ff1ebc;
+    font-size: 25px;
+}
+
