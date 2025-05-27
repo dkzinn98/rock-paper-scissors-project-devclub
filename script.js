@@ -29,12 +29,9 @@ const playMachine = () => {
 }
 
 const playTheGame = (human, machine) => {
-    console.log('Humano: ' + human + ',', 'Alexa: ' + machine + '.')
-
-    // quando tem um empate, ele retornará a mensagem "It was a draw"
-
     if (human === machine) {
         result.innerHTML = "It was a draw"
+        // quando tem um empate, ele retornará a mensagem "It was a draw"
     }
 
     // porém quando ele ganha nas seguintes formas abaixo, retornará a mesagem "You Win"
